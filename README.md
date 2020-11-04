@@ -33,7 +33,8 @@ pip install nara-wpe
 
 ## Description
 
-ソース一覧
+- SOURCE SUMMARY：[URL](https://github.com/CC-WO/SoundSourceSeparation/blob/main/SOURCE.md)
+- SUMMARY：[URL](https://github.com/CC-WO/SoundSourceSeparation/blob/main/SUMMARY.md)
 
 ## Author
 
