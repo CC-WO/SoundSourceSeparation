@@ -4,6 +4,8 @@ Sound Source Separation with Python
 
 ## DEMO
 
+DEMO.
+
 ## Features
 
 Features.
@@ -25,26 +27,22 @@ pip install nara-wpe
 
 ## Usage
 
-”DEMO"の実行や"Name”の具体的な使用方法を説明する
+Usage.
 
 ## Note
 
-注意点などがあれば書く
+Note.
 
 ## Description
 
-- SOURCE SUMMARY：[URL](https://github.com/CC-WO/SoundSourceSeparation/blob/main/SOURCE.md)
-- SUMMARY：[URL](https://github.com/CC-WO/SoundSourceSeparation/blob/main/SUMMARY.md)
+- SOURCE：[URL](SOURCE.md)
+- SUMMARY：[URL](SUMMARY.md)
 
 ## Author
-
-作成情報を列挙する
 
 - Author: CCWO
 - E-mail: cc.ccwo.cc@gmail.com
 
 ## License
 
-ライセンスを明示する
-
-"hoge" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
+"SoundSourceSeparation" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
