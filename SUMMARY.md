@@ -33,9 +33,9 @@ x: 観測音(時間情報をもつ), c1: 音源1, c2: 音源2
 alt="x_t = a_{m,1}s_1 + a_{m,2}s_2
 ">
 
-am,1やam,2は音の減衰もしくは音の遅れを表す係数で, これは音源ごとに決まる.
+a_m,1やa_m,2は音の減衰もしくは音の遅れを表す係数で, これは音源ごとに決まる.
 
-もし, am,1とam,2がわかっているとすると, 未知の変数は2つということになります. 観測信号が2つあれば, 次の連立方程式を解くことで未知の2変数を求めることができる
+もし, a_m,1とa_m,2がわかっているとすると, 未知の変数は2つということになる. 観測信号が2つあれば, 次の連立方程式を解くことで未知の2変数を求めることができる
 
 <img src=
 "https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+x_1+%3D+a_%7B1%2C1%7Ds_1+%2B+a_%7B1%2C2%7Ds_2" 
@@ -60,11 +60,11 @@ alt="s_2 = \frac{x_1a_{2,1}-x_2a_{1,1}}{a_{1,2}a_{2,1}-a_{1,1}a_{2,2}}
 
 となる.
 
-しかし, 実際には音源の場所はわからない場合も多いと考えられる. 入力信号しか手に入らない場合はam,1やam,2が事前に分かっているという仮定は強すぎる.
+しかし, 実際には音源の場所はわからない場合も多いと考えられる. 入力信号しか手に入らない場合はa_m,1やa_m,2が事前に分かっているという仮定は強すぎる.
 
-ここで仮にam,1やam,2がわかっていいなくても音を分離できる技術がある. それがブラインド音源分離と呼ばれる技術だ. その際にもう一つのモデルである音源モデルを用いる.
+ここで仮にa_m,1やa_m,2がわかっていいなくても音を分離できる技術がある. それがブラインド音源分離と呼ばれる技術だ. その際はもう一つのモデルである音源モデルを用いる.
 
-音源モデルを使う場合は, am,1やam,2をとりあえずランダムに設定し, 何かしらのs1,s2を推定します. この推定したs1,s2が音声らしいかどうかを評価できたとする. 逆に推定されたs1, s2が音声らしくなければam,1やam,2が正しくないということになるのでもう一度試す必要があるということになる. これを繰り返していきs1, s2が音声らしいものとなればよいというわけだ.
+音源モデルを使う場合は, a_m,1やa_m,2をとりあえずランダムに設定し, 何かしらのs_1,s_2を推定する. この推定したs_1,s_2が音声らしいかどうかを評価できたとする. 逆に推定されたs_1, s_2が音声らしくなければa_m,1やa_m,2が正しくないということになるのでもう一度試す必要があるということになる. これを繰り返していきs_1, s_2が音声らしいものとなればよい.
 
 ## 第二章 音声処理の基礎
 
@@ -78,23 +78,23 @@ alt="s_2 = \frac{x_1a_{2,1}-x_2a_{1,1}}{a_{1,2}a_{2,1}-a_{1,1}a_{2,2}}
 
 ### 2.2 サンプリング定理とは
 
-`サンプリング周波数の半分より上の周波数成分については, サンプリングされた音声データから元々の連続的な波形を正しく復元することができない`
+`サンプリング周波数の半分より上の周波数成分については, サンプリングされた音声データから元々の連続的な波形を正しく復元することができない.`
 
-### 2.3 フーリエ変換
+### 2.3 フーリエ変換とは
+
+`フーリエ変換は時間領域のデータを周波数領域のデータに変換する.`
 
 ここで時系列データのことを時間領域のデータといい, 周波数成分の振幅と位相のデータを周波数領域のデータという.
 
-`フーリエ変換は時間領域のデータを周波数領域のデータに変換する`
-
 ### 2.4 短時間フーリエ変換とは
 
-`元となる音声データを短時間の時系列データに区切り, そのデータごとにフーリエ変換を施すこと`
+`元となる音声データを短時間の時系列データに区切り, そのデータごとにフーリエ変換を施すこと.`
 
 短時間の時系列データの一つひとつをフレームと呼び, フーリエ変換した各フレームを時間方向に並べることで, 周波数ごとの振幅の変換を捉えることができる. 通常, 数十ミリ秒単位のデータごと(フレーム)にフーリエ変換する. またフレームを時間方向に少しずつオーバーラップさせることでより時間方向の周波数ごとの変化をより連続的に問えることができる.
 
-### 2.5 窓間数とは
+### 2.5 窓関数とは
 
-短時間フーリエ変換を行うときに, 短時間の時間領域に音声波形をフレームごとに切り出すが, その際に窓間数という関数をかけて波形を切り出す. これにより周波数に変換した祭に, 他の周波数が漏れ込む影響を軽減できる.
+短時間フーリエ変換を行うときに, 短時間の時間領域に音声波形をフレームごとに切り出すが, その際に窓関数をかけて波形を切り出す. これにより周波数に変換した際に, 他の周波数が漏れ込む影響を軽減できる.
 
 ハニング窓
 
@@ -202,63 +202,63 @@ bが0,-N,Nのときはexpの位相成分のみが残り, それ以外の時は�
 
 次の4つのパターンでy(l,k)を考える.
 
-1 k:1 -> N/2-1のとき
+1. k：1 から N/2-1のとき
 
-<img src=
-"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+1+%5Cleqq+k%27+%2B+k+%5Cleqq+N-1" 
-alt="1 \leqq k' + k \leqq N-1">
+    <img src=
+    "https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+1+%5Cleqq+k%27+%2B+k+%5Cleqq+N-1" 
+    alt="1 \leqq k' + k \leqq N-1">
 
-<img src=
-"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+-%5Cfrac%7BN%7D%7B2%7D+%5Cleqq+k%27+-+k+%5Cleqq+%5Cfrac%7BN%7D%7B2%7D" 
-alt="-\frac{N}{2} \leqq k' - k \leqq \frac{N}{2}">
+    <img src=
+    "https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+-%5Cfrac%7BN%7D%7B2%7D+%5Cleqq+k%27+-+k+%5Cleqq+%5Cfrac%7BN%7D%7B2%7D" 
+    alt="-\frac{N}{2} \leqq k' - k \leqq \frac{N}{2}">
 
-となり, bが0,-N,Nのときだけ0以外になることを利用し, 次のようになる.(反時計回りの成分が残る)
+    となり, bが0,-N,Nのときだけ0以外になることを利用し, 次のようになる.(反時計回りの成分が残る)
 
-<img src=
-"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+y%28l%2Ck%29%3D%5Cfrac%7BNA_%7Bl%2Ck%27%7D%7D%7B2%7Dexp%28j%5Ctheta_%7Bl%2Ck%27%7D%29" 
-alt="y(l,k)=\frac{NA_{l,k'}}{2}exp(j\theta_{l,k'})">
+    <img src=
+    "https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+y%28l%2Ck%29%3D%5Cfrac%7BNA_%7Bl%2Ck%27%7D%7D%7B2%7Dexp%28j%5Ctheta_%7Bl%2Ck%27%7D%29" 
+    alt="y(l,k)=\frac{NA_{l,k'}}{2}exp(j\theta_{l,k'})">
 
-2 k:-N/2+1 -> -1のとき
+1. k：-N/2+1から-1のとき
 
-<img src=
-"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+-%5Cfrac%7BN%7D%7B2%7D+%5Cleqq+k%27+%2B+k+%5Cleqq+%5Cfrac%7BN%7D%7B2%7D" 
-alt="-\frac{N}{2} \leqq k' + k \leqq \frac{N}{2}">
+    <img src=
+    "https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+-%5Cfrac%7BN%7D%7B2%7D+%5Cleqq+k%27+%2B+k+%5Cleqq+%5Cfrac%7BN%7D%7B2%7D" 
+    alt="-\frac{N}{2} \leqq k' + k \leqq \frac{N}{2}">
 
-<img src=
-"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+1+%5Cleqq+k%27+-+k+%5Cleqq+N-1" 
-alt="1 \leqq k' - k \leqq N-1">
+    <img src=
+    "https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+1+%5Cleqq+k%27+-+k+%5Cleqq+N-1" 
+    alt="1 \leqq k' - k \leqq N-1">
 
-同様に, bが0,-N,Nのときだけ0以外になることを利用し, 次のようになる.(時計回りの成分が残る)
+    同様に, bが0,-N,Nのときだけ0以外になることを利用し, 次のようになる.(時計回りの成分が残る)
 
-<img src=
-"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+y%28l%2Ck%29%3D%5Cfrac%7BNA_%7Bl%2Ck%27%7D%7D%7B2%7Dexp%28-j%5Ctheta_%7Bl%2Ck%27%7D%29" 
-alt="y(l,k)=\frac{NA_{l,k'}}{2}exp(-j\theta_{l,k'})">
+    <img src=
+    "https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+y%28l%2Ck%29%3D%5Cfrac%7BNA_%7Bl%2Ck%27%7D%7D%7B2%7Dexp%28-j%5Ctheta_%7Bl%2Ck%27%7D%29" 
+    alt="y(l,k)=\frac{NA_{l,k'}}{2}exp(-j\theta_{l,k'})">
 
-3 k=0のとき
+1. k=0のとき
 
-<img src=
-"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+y%28l%2Ck%29%3D2NA_%7Bl%2Ck%27%7Dcos%28%5Ctheta_%7Bl%2Ck%27%7D%29" 
-alt="y(l,k)=2NA_{l,k'}cos(\theta_{l,k'})">
+    <img src=
+    "https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+y%28l%2Ck%29%3D2NA_%7Bl%2Ck%27%7Dcos%28%5Ctheta_%7Bl%2Ck%27%7D%29" 
+    alt="y(l,k)=2NA_{l,k'}cos(\theta_{l,k'})">
 
-このときは, オイラーの公式からcosの実数に戻すことが可能となる.(位相という概念が意味を持たない成分ということになる.) k=0のときの周波数成分をオフセット成分といったりする. 実用上はこのオフセット成分の振幅を考えることはあまり意味がない. 処理の過程で0と置いてしまっても問題ないことが多い.
+    このときは, オイラーの公式からcosの実数に戻すことが可能となる.(位相という概念が意味を持たない成分ということになる.) k=0のときの周波数成分をオフセット成分といったりする. 実用上はこのオフセット成分の振幅を考えることはあまり意味がない. 処理の過程で0と置いてしまっても問題ないことが多い.
 
-4 k=N/2のとき
+1. k=N/2のとき
 
-<img src=
-"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cfrac%7BN%7D%7B2%7D+%5Cleqq+k%27+%2B+k+%5Cleqq+N" 
-alt="\frac{N}{2} \leqq k' + k \leqq N">
+    <img src=
+    "https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cfrac%7BN%7D%7B2%7D+%5Cleqq+k%27+%2B+k+%5Cleqq+N" 
+    alt="\frac{N}{2} \leqq k' + k \leqq N">
 
-<img src=
-"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+-%5Cfrac%7BN%7D%7B2%7D+%5Cleqq+k%27+-+k+%5Cleqq+0" 
-alt="-\frac{N}{2} \leqq k' - k \leqq 0">
+    <img src=
+    "https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+-%5Cfrac%7BN%7D%7B2%7D+%5Cleqq+k%27+-+k+%5Cleqq+0" 
+    alt="-\frac{N}{2} \leqq k' - k \leqq 0">
 
-k=0のときと同様に実数の成分だけが残る.(位相という概念が意味を持たない成分ということになる.)
+    k=0のときと同様に実数の成分だけが残る.(位相という概念が意味を持たない成分ということになる.)
 
-<img src=
-"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+y%28l%2Ck%29%3D2NA_%7Bl%2Ck%27%7Dcos%28%5Ctheta_%7Bl%2Ck%27%7D%29" 
-alt="y(l,k)=2NA_{l,k'}cos(\theta_{l,k'})">
+    <img src=
+    "https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+y%28l%2Ck%29%3D2NA_%7Bl%2Ck%27%7Dcos%28%5Ctheta_%7Bl%2Ck%27%7D%29" 
+    alt="y(l,k)=2NA_{l,k'}cos(\theta_{l,k'})">
 
-いずれのケースも, 短時間フーリエ変換を行うことで得られる複素数y(l,k)からkに相当する周波数の振幅A_l,kと位相θ_l,kを容易に知ることができることを意味している. また負の周波数成分は, 生の周波数成分の複素共役にになっていることがわかる. そのため, 負の周波数成分のフーリエ変換の情報は冗長だということになり, 信号処理の各種モジュールでは, 負の周波数成分を除いた, kが0からN/2までのN/2+1個(ビン)のフーリエ変換の結果を出力することが一般的だ.
+いずれのケースも, 短時間フーリエ変換を行うことで得られる複素数y(l,k)からkに相当する周波数の振幅A_l,kと位相θ_l,kを容易に知ることができることを意味する. また負の周波数成分は, 正の周波数成分の複素共役にになっていることがわかる. そのため, 負の周波数成分のフーリエ変換の情報は冗長だということになる. 信号処理の各種モジュールでは, 負の周波数成分を除いたkが0からN/2までのN/2+1個(ビン)のフーリエ変換の結果を出力することが一般的だ.
 
 ### 2.7 音声の可視化
 
