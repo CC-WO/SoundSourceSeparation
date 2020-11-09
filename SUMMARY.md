@@ -272,3 +272,13 @@ alt="x_{lk}=|x_{lk}|exp(j{\phi}(x_{lk}))">
 - |φ_lk|：位相
 
 音声の特徴は, 位相よりも主に振幅に現れる.
+
+### 2.8 短時間逆フーリエ変換とは
+
+`周波数領域の波形を時間領域の波形に戻す処理のこと. 短時間フーリエ変換の逆の処理となる.`
+
+<img src=
+"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+y%27%28l%2Cn%29+%3D+%5Cfrac%7B1%7D%7BN%7D%5CSigma%5E%7BN-1%7D_%7Bk%3D0%7Dy%28l%2Ck%29exp%28j%5Cfrac%7B2%7B%5Cpi%7Dnk%7D%7BN%7D%29" 
+alt="y'(l,n) = \frac{1}{N}\Sigma^{N-1}_{k=0}y(l,k)exp(j\frac{2{\pi}nk}{N})">
+
+この信号はフレームシフト幅L_shiftに依存し, フレーム方向にデータが重なっている. 短時間逆フーリエ変換をする際は, フレームシフトによるデータの重なりと窓間数の影響を考慮して時間信号に戻す必要がある.
