@@ -13,7 +13,7 @@
 マイクロホンの観測音は以下の式で表せる.
 
 <img src=
-"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+x_t+%3D+c_1+%2B+c_2%0A" 
+"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+x_t+%3D+c_1+%2B+c_2%0A"
 alt="x_t = c_1 + c_2
 ">
 
@@ -29,7 +29,7 @@ x: 観測音(時間情報をもつ), c1: 音源1, c2: 音源2
 空間モデルでは, 音の伝播の仕方が場所ごとに異なることを利用して, 音の大小関係・時間差から音源を推定する. これを先ほどの数式を使って表現すると次のようになる.
 
 <img src=
-"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+x_t+%3D+a_%7Bm%2C1%7Ds_1+%2B+a_%7Bm%2C2%7Ds_2%0A" 
+"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+x_t+%3D+a_%7Bm%2C1%7Ds_1+%2B+a_%7Bm%2C2%7Ds_2%0A"
 alt="x_t = a_{m,1}s_1 + a_{m,2}s_2
 ">
 
@@ -38,23 +38,23 @@ a_m,1やa_m,2は音の減衰もしくは音の遅れを表す係数で, これ�
 もし, a_m,1とa_m,2がわかっているとすると, 未知の変数は2つということになる. 観測信号が2つあれば, 次の連立方程式を解くことで未知の2変数を求めることができる
 
 <img src=
-"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+x_1+%3D+a_%7B1%2C1%7Ds_1+%2B+a_%7B1%2C2%7Ds_2" 
+"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+x_1+%3D+a_%7B1%2C1%7Ds_1+%2B+a_%7B1%2C2%7Ds_2"
 alt="x_1 = a_{1,1}s_1 + a_{1,2}s_2">
 
 <img src=
-"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+x_2+%3D+a_%7B2%2C1%7Ds_1+%2B+a_%7B2%2C2%7Ds_2%0A" 
+"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+x_2+%3D+a_%7B2%2C1%7Ds_1+%2B+a_%7B2%2C2%7Ds_2%0A"
 alt="x_2 = a_{2,1}s_1 + a_{2,2}s_2
 ">
 
 したがって,
 
 <img src=
-"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+s_1+%3D+%5Cfrac%7Bx_1a_%7B2%2C2%7D-x_2a_%7B1%2C2%7D%7D%7Ba_%7B1%2C1%7Da_%7B2%2C2%7D-a_%7B2%2C1%7Da_%7B1%2C2%7D%7D%0A" 
+"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+s_1+%3D+%5Cfrac%7Bx_1a_%7B2%2C2%7D-x_2a_%7B1%2C2%7D%7D%7Ba_%7B1%2C1%7Da_%7B2%2C2%7D-a_%7B2%2C1%7Da_%7B1%2C2%7D%7D%0A"
 alt="s_1 = \frac{x_1a_{2,2}-x_2a_{1,2}}{a_{1,1}a_{2,2}-a_{2,1}a_{1,2}}
 ">
 
 <img src=
-"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+s_2+%3D+%5Cfrac%7Bx_1a_%7B2%2C1%7D-x_2a_%7B1%2C1%7D%7D%7Ba_%7B1%2C2%7Da_%7B2%2C1%7D-a_%7B1%2C1%7Da_%7B2%2C2%7D%7D%0A" 
+"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+s_2+%3D+%5Cfrac%7Bx_1a_%7B2%2C1%7D-x_2a_%7B1%2C1%7D%7D%7Ba_%7B1%2C2%7Da_%7B2%2C1%7D-a_%7B1%2C1%7Da_%7B2%2C2%7D%7D%0A"
 alt="s_2 = \frac{x_1a_{2,1}-x_2a_{1,1}}{a_{1,2}a_{2,1}-a_{1,1}a_{2,2}}
 ">
 
@@ -99,7 +99,7 @@ alt="s_2 = \frac{x_1a_{2,1}-x_2a_{1,1}}{a_{1,2}a_{2,1}-a_{1,1}a_{2,2}}
 ハニング窓
 
 <img src=
-"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+w%28n%29+%3D+0.5+-+0.5cos+%5Cfrac%7B2+%5Cpi+n%7D%7BN-1%7D%0A" 
+"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+w%28n%29+%3D+0.5+-+0.5cos+%5Cfrac%7B2+%5Cpi+n%7D%7BN-1%7D%0A"
 alt="w(n) = 0.5 - 0.5cos \frac{2 \pi n}{N-1}
 ">
 
@@ -108,7 +108,7 @@ alt="w(n) = 0.5 - 0.5cos \frac{2 \pi n}{N-1}
 ハミング窓
 
 <img src=
-"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+w%28n%29+%3D+0.54+-+0.46+cos+%5Cfrac%7B2+%5Cpi+n%7D%7BN-1%7D%0A" 
+"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+w%28n%29+%3D+0.54+-+0.46+cos+%5Cfrac%7B2+%5Cpi+n%7D%7BN-1%7D%0A"
 alt="w(n) = 0.54 - 0.46 cos \frac{2 \pi n}{N-1}
 ">
 
@@ -119,7 +119,7 @@ alt="w(n) = 0.54 - 0.46 cos \frac{2 \pi n}{N-1}
 単にある区間を区切ったもの.
 
 <img src=
-"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+w%28n%29+%3D+1%0A" 
+"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+w%28n%29+%3D+1%0A"
 alt="w(n) = 1
 ">
 
@@ -128,7 +128,7 @@ alt="w(n) = 1
 音声波形をフレームごとに切り出し, 窓間数を掛けたフレームごとの音声波形は次のようになる.
 
 <img src=
-"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+x%27%28l%2Cn%29%3Dw%28n%29x%28l%2AL_shift%2Bn%29" 
+"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+x%27%28l%2Cn%29%3Dw%28n%29x%28l%2AL_shift%2Bn%29"
 alt="x'(l,n)=w(n)x(l*L_shift+n)">
 
 - l：フレームの番号
@@ -138,43 +138,43 @@ alt="x'(l,n)=w(n)x(l*L_shift+n)">
 このとき短時間フーリエ変換は以下のように実行する.
 
 <img src=
-"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+y%28l%2Ck%29%3D%5CSigma%5E%7BN-1%7D_%7Bn%3D0%7Dx%27%28l%2Cn%29exp%28-j%5Cfrac%7B2%7B%5Cpi%7Dnk%7D%7BN%7D%29" 
+"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+y%28l%2Ck%29%3D%5CSigma%5E%7BN-1%7D_%7Bn%3D0%7Dx%27%28l%2Cn%29exp%28-j%5Cfrac%7B2%7B%5Cpi%7Dnk%7D%7BN%7D%29"
 alt="y(l,k)=\Sigma^{N-1}_{n=0}x'(l,n)exp(-j\frac{2{\pi}nk}{N})">
 
 フレームlにおける周波数fの波形x'(l,n,f)は振幅A_l,fと位相θ_l,fを用いて次のようになる. (Fs：サンプリング周波数, t=n/Fs)
 
 <img src=
-"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+x%27%28l%2Cn%2Cf%29%3DA_%7Bl%2Cf%7Dcos%28%5Cfrac%7B2%7B%5Cpi%7Dfn%7D%7BF_s%7D%29%2B%5Ctheta_%7Bl%2Cf%7D" 
+"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+x%27%28l%2Cn%2Cf%29%3DA_%7Bl%2Cf%7Dcos%28%5Cfrac%7B2%7B%5Cpi%7Dfn%7D%7BF_s%7D%29%2B%5Ctheta_%7Bl%2Cf%7D"
 alt="x'(l,n,f)=A_{l,f}cos(\frac{2{\pi}fn}{F_s})+\theta_{l,f}">
 
 ナイキスト周波数Fs/2以下のさまざまな周波数成分で上式を積分すると次のようになる.
 
 <img src=
-"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+x%27%28l%2Cn%29%3D%5CSigma_%7Bf%3D0%7D%5E%7B%5Cfrac%7BFs%7D%7B2%7D%7DA_%7Bl%2Cf%7Dcos%28%5Cfrac%7B2%7B%5Cpi%7Dfn%7D%7BF_s%7D%29%2B%5Ctheta_%7Bl%2Cf%7D" 
+"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+x%27%28l%2Cn%29%3D%5CSigma_%7Bf%3D0%7D%5E%7B%5Cfrac%7BFs%7D%7B2%7D%7DA_%7Bl%2Cf%7Dcos%28%5Cfrac%7B2%7B%5Cpi%7Dfn%7D%7BF_s%7D%29%2B%5Ctheta_%7Bl%2Cf%7D"
 alt="x'(l,n)=\Sigma_{f=0}^{\frac{Fs}{2}}A_{l,f}cos(\frac{2{\pi}fn}{F_s})+\theta_{l,f}">
 
 オイラーの公式を逆に用いると上式は複素数を用いて次のようになる.
 
 <img src=
-"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+x%27%28l%2Cn%29%3D%5CSigma_%7Bf%3D0%7D%5E%7B%5Cfrac%7BFs%7D%7B2%7D%7D%5Cfrac%7BA_%7Bl%2Cf%7Dexp%28j%28%5Cfrac%7B2%7B%5Cpi%7Dfn%7D%7BF_s%7D%29%2B%5Ctheta_%7Bl%2Cf%7D%29%2BA_%7Bl%2Cf%7Dexp%28-j%28%5Cfrac%7B2%7B%5Cpi%7Dfn%7D%7BF_s%7D%29%2B%5Ctheta_%7Bl%2Cf%7D%29%7D%7B2%7D" 
+"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+x%27%28l%2Cn%29%3D%5CSigma_%7Bf%3D0%7D%5E%7B%5Cfrac%7BFs%7D%7B2%7D%7D%5Cfrac%7BA_%7Bl%2Cf%7Dexp%28j%28%5Cfrac%7B2%7B%5Cpi%7Dfn%7D%7BF_s%7D%29%2B%5Ctheta_%7Bl%2Cf%7D%29%2BA_%7Bl%2Cf%7Dexp%28-j%28%5Cfrac%7B2%7B%5Cpi%7Dfn%7D%7BF_s%7D%29%2B%5Ctheta_%7Bl%2Cf%7D%29%7D%7B2%7D"
 alt="x'(l,n)=\Sigma_{f=0}^{\frac{Fs}{2}}\frac{A_{l,f}exp(j(\frac{2{\pi}fn}{F_s})+\theta_{l,f})+A_{l,f}exp(-j(\frac{2{\pi}fn}{F_s})+\theta_{l,f})}{2}">
 
 次に周波数fについて, 次のように0以上の整数k'で決まる離散的な変数を考える.
 
 <img src=
-"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+f%3D%5Cfrac%7Bk%27F_%7Bs%7D%7D%7BN%7D" 
+"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+f%3D%5Cfrac%7Bk%27F_%7Bs%7D%7D%7BN%7D"
 alt="f=\frac{k'F_{s}}{N}">
 
 このときf:0->Fs/2では, k':0->N/2となり, とするとx'(l,n)は次のようになる.
 
 <img src=
-"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+x%27%28l%2Cn%29%3D%5CSigma_%7Bk%3D0%7D%5E%7B%5Cfrac%7BN%7D%7B2%7D%7D%5Cfrac%7BA_%7Bl%2Cf%7Dexp%28j%28%5Cfrac%7B2%7B%5Cpi%7Dnk%27%7D%7BN%7D%29%2B%5Ctheta_%7Bl%2Cf%7D%29%2BA_%7Bl%2Cf%7Dexp%28-j%28%5Cfrac%7B2%7B%5Cpi%7Dnk%27%7D%7BN%7D%29%2B%5Ctheta_%7Bl%2Cf%7D%29%7D%7B2%7D" 
+"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+x%27%28l%2Cn%29%3D%5CSigma_%7Bk%3D0%7D%5E%7B%5Cfrac%7BN%7D%7B2%7D%7D%5Cfrac%7BA_%7Bl%2Cf%7Dexp%28j%28%5Cfrac%7B2%7B%5Cpi%7Dnk%27%7D%7BN%7D%29%2B%5Ctheta_%7Bl%2Cf%7D%29%2BA_%7Bl%2Cf%7Dexp%28-j%28%5Cfrac%7B2%7B%5Cpi%7Dnk%27%7D%7BN%7D%29%2B%5Ctheta_%7Bl%2Cf%7D%29%7D%7B2%7D"
 alt="x'(l,n)=\Sigma_{k=0}^{\frac{N}{2}}\frac{A_{l,f}exp(j(\frac{2{\pi}nk'}{N})+\theta_{l,f})+A_{l,f}exp(-j(\frac{2{\pi}nk'}{N})+\theta_{l,f})}{2}">
 
 上式よりさまざまな周波数成分を持つ音声信号は, それぞれの周波数の信号を加算することで表現できる. サンプリング定理と関連するが, 一つの音声波形x'(l,n)に対して, 振幅と位相は1セットのみ存在するということが知られている. 上式を短時間フーリエ変換の式に代入すると,
 
 <img src=
-"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+y%28l%2Ck%29%3D%5CSigma%5E%7BN%2F2%7D_%7Bk%27%3D0%7D%5Cfrac%7BA_%7Bl%2Cf%7D%5CSigma%5E%7BN-1%7D_%7Bn%3D0%7Dexp%28j%28%5Cfrac%7B2%7B%5Cpi%7Dn%28k%27-k%29%7D%7BN%7D%29%2B%5Ctheta_%7Bl%2Cf%7D%29%2Bexp%28-j%28%5Cfrac%7B2%7B%5Cpi%7Dn%28k%27%2Bk%29%7D%7BN%7D%29%2B%5Ctheta_%7Bl%2Cf%7D%29%7D%7B2%7D" 
+"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+y%28l%2Ck%29%3D%5CSigma%5E%7BN%2F2%7D_%7Bk%27%3D0%7D%5Cfrac%7BA_%7Bl%2Cf%7D%5CSigma%5E%7BN-1%7D_%7Bn%3D0%7Dexp%28j%28%5Cfrac%7B2%7B%5Cpi%7Dn%28k%27-k%29%7D%7BN%7D%29%2B%5Ctheta_%7Bl%2Cf%7D%29%2Bexp%28-j%28%5Cfrac%7B2%7B%5Cpi%7Dn%28k%27%2Bk%29%7D%7BN%7D%29%2B%5Ctheta_%7Bl%2Cf%7D%29%7D%7B2%7D"
 alt="y(l,k)=\Sigma^{N/2}_{k'=0}\frac{A_{l,f}\Sigma^{N-1}_{n=0}exp(j(\frac{2{\pi}n(k'-k)}{N})+\theta_{l,f})+exp(-j(\frac{2{\pi}n(k'+k)}{N})+\theta_{l,f})}{2}">
 
 となる. 短時間フーリエ変換のkは-N/2+1からN/2までの整数とする.
@@ -182,19 +182,19 @@ alt="y(l,k)=\Sigma^{N/2}_{k'=0}\frac{A_{l,f}\Sigma^{N-1}_{n=0}exp(j(\frac{2{\pi}
 ここで, y(l,k)を計算するためには,
 
 <img src=
-"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5CSigma%5E%7BN-1%7D_%7Bn%3D0%7Dexp%28j%28%5Cfrac%7B2%7B%5Cpi%7Dn%28k%27-k%29%7D%7BN%7D%29%2B%5Ctheta_%7Bl%2Cf%7D%29%0A" 
+"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5CSigma%5E%7BN-1%7D_%7Bn%3D0%7Dexp%28j%28%5Cfrac%7B2%7B%5Cpi%7Dn%28k%27-k%29%7D%7BN%7D%29%2B%5Ctheta_%7Bl%2Cf%7D%29%0A"
 alt="\Sigma^{N-1}_{n=0}exp(j(\frac{2{\pi}n(k'-k)}{N})+\theta_{l,f})
 ">
 
 <img src=
-"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5CSigma%5E%7BN-1%7D_%7Bn%3D0%7Dexp%28-j%28%5Cfrac%7B2%7B%5Cpi%7Dn%28k%27%2Bk%29%7D%7BN%7D%29%2B%5Ctheta_%7Bl%2Cf%7D%29%0A" 
+"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5CSigma%5E%7BN-1%7D_%7Bn%3D0%7Dexp%28-j%28%5Cfrac%7B2%7B%5Cpi%7Dn%28k%27%2Bk%29%7D%7BN%7D%29%2B%5Ctheta_%7Bl%2Cf%7D%29%0A"
 alt="\Sigma^{N-1}_{n=0}exp(-j(\frac{2{\pi}n(k'+k)}{N})+\theta_{l,f})
 ">
 
 この二項をどう計算するかが鍵となる. この計算を行うためには, 以下の性質を利用する. ここでbは-NからNまでの整数とする.
 
 <img src=
-"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5CSigma%5E%7BN-1%7D_%7Bn%3D0%7Dexp%28-j%28%5Cfrac%7B2%7B%5Cpi%7Dnb%7D%7BN%7D%29%2B%5Ctheta_%7Bl%2Cf%7D%29%3DNexp%28j%5Ctheta_%7Bl%2Ck%27%7D%29%2C%7B%5Crm%7Bif%7D%7Db+%5Cin+%7B0%2CN%2C-N%7D%0A" 
+"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5CSigma%5E%7BN-1%7D_%7Bn%3D0%7Dexp%28-j%28%5Cfrac%7B2%7B%5Cpi%7Dnb%7D%7BN%7D%29%2B%5Ctheta_%7Bl%2Cf%7D%29%3DNexp%28j%5Ctheta_%7Bl%2Ck%27%7D%29%2C%7B%5Crm%7Bif%7D%7Db+%5Cin+%7B0%2CN%2C-N%7D%0A"
 alt="\Sigma^{N-1}_{n=0}exp(-j(\frac{2{\pi}nb}{N})+\theta_{l,f})=Nexp(j\theta_{l,k'}),{\rm{if}}b \in {0,N,-N}
 ">
 
@@ -205,39 +205,39 @@ bが0,-N,Nのときはexpの位相成分のみが残り, それ以外の時は�
 1. k：1 から N/2-1のとき
 
     <img src=
-    "https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+1+%5Cleqq+k%27+%2B+k+%5Cleqq+N-1" 
+    "https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+1+%5Cleqq+k%27+%2B+k+%5Cleqq+N-1"
     alt="1 \leqq k' + k \leqq N-1">
 
     <img src=
-    "https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+-%5Cfrac%7BN%7D%7B2%7D+%5Cleqq+k%27+-+k+%5Cleqq+%5Cfrac%7BN%7D%7B2%7D" 
+    "https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+-%5Cfrac%7BN%7D%7B2%7D+%5Cleqq+k%27+-+k+%5Cleqq+%5Cfrac%7BN%7D%7B2%7D"
     alt="-\frac{N}{2} \leqq k' - k \leqq \frac{N}{2}">
 
     となり, bが0,-N,Nのときだけ0以外になることを利用し, 次のようになる.(反時計回りの成分が残る)
 
     <img src=
-    "https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+y%28l%2Ck%29%3D%5Cfrac%7BNA_%7Bl%2Ck%27%7D%7D%7B2%7Dexp%28j%5Ctheta_%7Bl%2Ck%27%7D%29" 
+    "https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+y%28l%2Ck%29%3D%5Cfrac%7BNA_%7Bl%2Ck%27%7D%7D%7B2%7Dexp%28j%5Ctheta_%7Bl%2Ck%27%7D%29"
     alt="y(l,k)=\frac{NA_{l,k'}}{2}exp(j\theta_{l,k'})">
 
 1. k：-N/2+1から-1のとき
 
     <img src=
-    "https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+-%5Cfrac%7BN%7D%7B2%7D+%5Cleqq+k%27+%2B+k+%5Cleqq+%5Cfrac%7BN%7D%7B2%7D" 
+    "https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+-%5Cfrac%7BN%7D%7B2%7D+%5Cleqq+k%27+%2B+k+%5Cleqq+%5Cfrac%7BN%7D%7B2%7D"
     alt="-\frac{N}{2} \leqq k' + k \leqq \frac{N}{2}">
 
     <img src=
-    "https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+1+%5Cleqq+k%27+-+k+%5Cleqq+N-1" 
+    "https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+1+%5Cleqq+k%27+-+k+%5Cleqq+N-1"
     alt="1 \leqq k' - k \leqq N-1">
 
     同様に, bが0,-N,Nのときだけ0以外になることを利用し, 次のようになる.(時計回りの成分が残る)
 
     <img src=
-    "https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+y%28l%2Ck%29%3D%5Cfrac%7BNA_%7Bl%2Ck%27%7D%7D%7B2%7Dexp%28-j%5Ctheta_%7Bl%2Ck%27%7D%29" 
+    "https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+y%28l%2Ck%29%3D%5Cfrac%7BNA_%7Bl%2Ck%27%7D%7D%7B2%7Dexp%28-j%5Ctheta_%7Bl%2Ck%27%7D%29"
     alt="y(l,k)=\frac{NA_{l,k'}}{2}exp(-j\theta_{l,k'})">
 
 1. k=0のとき
 
     <img src=
-    "https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+y%28l%2Ck%29%3D2NA_%7Bl%2Ck%27%7Dcos%28%5Ctheta_%7Bl%2Ck%27%7D%29" 
+    "https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+y%28l%2Ck%29%3D2NA_%7Bl%2Ck%27%7Dcos%28%5Ctheta_%7Bl%2Ck%27%7D%29"
     alt="y(l,k)=2NA_{l,k'}cos(\theta_{l,k'})">
 
     このときは, オイラーの公式からcosの実数に戻すことが可能となる.(位相という概念が意味を持たない成分ということになる.) k=0のときの周波数成分をオフセット成分といったりする. 実用上はこのオフセット成分の振幅を考えることはあまり意味がない. 処理の過程で0と置いてしまっても問題ないことが多い.
@@ -245,17 +245,17 @@ bが0,-N,Nのときはexpの位相成分のみが残り, それ以外の時は�
 1. k=N/2のとき
 
     <img src=
-    "https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cfrac%7BN%7D%7B2%7D+%5Cleqq+k%27+%2B+k+%5Cleqq+N" 
+    "https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cfrac%7BN%7D%7B2%7D+%5Cleqq+k%27+%2B+k+%5Cleqq+N"
     alt="\frac{N}{2} \leqq k' + k \leqq N">
 
     <img src=
-    "https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+-%5Cfrac%7BN%7D%7B2%7D+%5Cleqq+k%27+-+k+%5Cleqq+0" 
+    "https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+-%5Cfrac%7BN%7D%7B2%7D+%5Cleqq+k%27+-+k+%5Cleqq+0"
     alt="-\frac{N}{2} \leqq k' - k \leqq 0">
 
     k=0のときと同様に実数の成分だけが残る.(位相という概念が意味を持たない成分ということになる.)
 
     <img src=
-    "https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+y%28l%2Ck%29%3D2NA_%7Bl%2Ck%27%7Dcos%28%5Ctheta_%7Bl%2Ck%27%7D%29" 
+    "https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+y%28l%2Ck%29%3D2NA_%7Bl%2Ck%27%7Dcos%28%5Ctheta_%7Bl%2Ck%27%7D%29"
     alt="y(l,k)=2NA_{l,k'}cos(\theta_{l,k'})">
 
 いずれのケースも, 短時間フーリエ変換を行うことで得られる複素数y(l,k)からkに相当する周波数の振幅A_l,kと位相θ_l,kを容易に知ることができることを意味する. また負の周波数成分は, 正の周波数成分の複素共役にになっていることがわかる. そのため, 負の周波数成分のフーリエ変換の情報は冗長だということになる. 信号処理の各種モジュールでは, 負の周波数成分を除いたkが0からN/2までのN/2+1個(ビン)のフーリエ変換の結果を出力することが一般的だ.
@@ -265,7 +265,7 @@ bが0,-N,Nのときはexpの位相成分のみが残り, それ以外の時は�
 各時間周波数の音声をx_lkとして書き直す.
 
 <img src=
-"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+x_%7Blk%7D%3D%7Cx_%7Blk%7D%7Cexp%28j%7B%5Cphi%7D%28x_%7Blk%7D%29%29" 
+"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+x_%7Blk%7D%3D%7Cx_%7Blk%7D%7Cexp%28j%7B%5Cphi%7D%28x_%7Blk%7D%29%29"
 alt="x_{lk}=|x_{lk}|exp(j{\phi}(x_{lk}))">
 
 - |x_lk|：振幅
@@ -278,7 +278,63 @@ alt="x_{lk}=|x_{lk}|exp(j{\phi}(x_{lk}))">
 `周波数領域の波形を時間領域の波形に戻す処理のこと. 短時間フーリエ変換の逆の処理となる.`
 
 <img src=
-"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+y%27%28l%2Cn%29+%3D+%5Cfrac%7B1%7D%7BN%7D%5CSigma%5E%7BN-1%7D_%7Bk%3D0%7Dy%28l%2Ck%29exp%28j%5Cfrac%7B2%7B%5Cpi%7Dnk%7D%7BN%7D%29" 
+"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+y%27%28l%2Cn%29+%3D+%5Cfrac%7B1%7D%7BN%7D%5CSigma%5E%7BN-1%7D_%7Bk%3D0%7Dy%28l%2Ck%29exp%28j%5Cfrac%7B2%7B%5Cpi%7Dnk%7D%7BN%7D%29"
 alt="y'(l,n) = \frac{1}{N}\Sigma^{N-1}_{k=0}y(l,k)exp(j\frac{2{\pi}nk}{N})">
 
 この信号はフレームシフト幅L_shiftに依存し, フレーム方向にデータが重なっている. 短時間逆フーリエ変換をする際は, フレームシフトによるデータの重なりと窓間数の影響を考慮して時間信号に戻す必要がある.
+
+### 2.9 背景雑音を取り除く
+
+ここでは, スペクトルサブトラクションとウィナーフィルタの二つの手法を説明する.
+
+どちらも音声の振幅成分を変化させて雑音を除去する方法だ.
+
+#### スペクトルサブトラクション法
+
+入力信号の振幅成分もしくは音量成分から雑音成分を引き算することで, 雑音成分を抑圧する.
+
+<img src=
+"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%7Cs_%7Blk%7D%7C+%5Capprox+%5Csqrt%5Bq%5D%7Bmax%28%7Cx_%7Blk%7D%7C%5E%7Bp%7D-%7B%5Calpha%7D%7Cn_%7Blk%7D%7C%5E%7Bp%7D%2C+%7B%5Cepsilon%7D%29%7D"
+alt="|s_{lk}| \approx \sqrt[q]{max(|x_{lk}|^{p}-{\alpha}|n_{lk}|^{p}, {\epsilon})}">
+
+pは1もしくは2に設定することが一般的. またαはスペクトルサブトラクションと呼び, どのくらい雑音を抑圧するかを制御するパラメータ. |n_lk|は雑音の振幅で別途推定する. 例えば, 雑音だけが存在する時間帯があれば, その時間のマイクロホン入力信号の情報から雑音の振幅を次のように推定できる.
+
+<img src=
+"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%7Cn_%7Blk%7D%7C+%3D+%5Csqrt%7B%5Cfrac%7B1%7D%7B%7C%5COmega_n%7D%5CSigma_%7Bl%7B%5Cin%7D%5COmega_%7Bn%7D%7D%7Cx_%7Blk%7D%7C%5E2%7D"
+alt="|n_{lk}| = \sqrt{\frac{1}{|\Omega_n}\Sigma_{l{\in}\Omega_{n}}|x_{lk}|^2}">
+
+スペクトルサブトラクション後の信号の位相成分は, 入力信号と同じものを用いるので,
+
+<img src=
+"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+exp%28j%7B%5Cphi%7D%28x_%7Blk%7D%29%29%3D%5Cfrac%7Bx_%7Blk%7D%7D%7B%7Cx_%7Blk%7D%7C%7D"
+alt="exp(j{\phi}(x_{lk}))=\frac{x_{lk}}{|x_{lk}|}">
+
+であることを利用し,
+
+<img src=
+"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Chat%7Bs%7D_%7Blk%7D%3D%7Cs_%7Blk%7D%7C%5Cfrac%7Bx_%7Blk%7D%7D%7B%7Cx_%7Blk%7D%7C%7D"
+alt="\hat{s}_{lk}=|s_{lk}|\frac{x_{lk}}{|x_{lk}|}">
+
+として推定する.
+
+#### ウィナーフィルタ
+
+入力信号に実数の係数r_lkを掛けることで出力信号を得る.
+
+<img src=
+"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Chat%7Bs%7D_%7Blk%7D+%3D+r_%7Blk%7Dx_%7Blk%7D"
+alt="\hat{s}_{lk} = r_{lk}x_{lk}">
+
+係数r_lkは次のように設定する.
+
+<img src=
+"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+r_%7Blk%7D+%3D+%5Cfrac%7B%7Cs_%7Blk%7D%7C%5E2%7C%7D%7B%7Cs_%7Blk%7D%7C%5E2%7C%2B%7B%5Cmu%7D%7Cn_%7Blk%7D%7C%5E2%7D"
+alt="r_{lk} = \frac{|s_{lk}|^2|}{|s_{lk}|^2|+{\mu}|n_{lk}|^2}">
+
+ここで,
+
+<img src=
+"https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%7Cs_%7Blk%7D%7C%5E2%7C+%3D+max%28%7Cx_%7Blk%7D%7C%5E2+-+%5Calpha+%7Cn_%7Blk%7D%7C%5E2%2C+%5Cepsilon%29"
+alt="|s_{lk}|^2| = max(|x_{lk}|^2 - \alpha |n_{lk}|^2, \epsilon)">
+
+として推定する. μを大きい値に設定することで雑音抑圧量を増やすことができる.
