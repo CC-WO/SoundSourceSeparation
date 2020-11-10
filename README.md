@@ -43,6 +43,10 @@ Note.
 - Author: CCWO
 - E-mail: cc.ccwo.cc@gmail.com
 
+## References
+
+- [https://github.com/masahitotogami/python_source_separation](https://github.com/masahitotogami/python_source_separation)
+
 ## License
 
 "SoundSourceSeparation" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
