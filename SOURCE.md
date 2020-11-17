@@ -21,3 +21,6 @@
 - [code2.15.py](src/code2.15.py) ウィナーフィルタによる雑音抑圧
 
 ## Chapter 3
+
+- [code2.14.py](src/code3.1.py) 行列の基本的な演算
+- [code2.15.py](src/code3.2.py) アインシュタイン縮約記法を用いたテンソル計算
