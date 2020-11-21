@@ -17,14 +17,14 @@ B = np.reshape(B, (K,R,N))
 
 C = np.einsum("lkmr, krn->lkmn", A, B)
 
-print("shape(C): ", np.shape(C))
+print("積(einsum)：shape(C): ", np.shape(C))
 
-print("A(0,0)B(0,0) = \n", np.matmul(A[0,0,...],B[0,...]))
-print("C(0,0) = \n", C[0,0,...])
+print("検算：A(0,0)B(0,0) = \n", np.matmul(A[0,0,...],B[0,...]))
+print("検算：C(0,0) = \n", C[0,0,...])
 
 C = np.einsum("lkmr, krn->kmn", A, B)
 
-print("shape(C): ", np.shape(C))
+print("積(einsum)：shape(C): ", np.shape(C))
 
 for l in range(L):
   if l == 0:
@@ -37,7 +37,7 @@ print("C(0)=\n", C[0,...])
 
 C = np.einsum("lkmn,kmn->lkmn", A,B)
 
-print("shape(C): ", np.shape(C))
+print("積(einsum)：shape(C): ", np.shape(C))
 
 print("A(0,0)B(0,0) = \n", np.multiply(A[0,0,...],B[0,...]))
 print("C(0,0) = \n", C[0,0,...])

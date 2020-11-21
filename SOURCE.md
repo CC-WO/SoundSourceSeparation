@@ -22,5 +22,9 @@
 
 ## Chapter 3
 
-- [code2.14.py](src/code3.1.py) 行列の基本的な演算
-- [code2.15.py](src/code3.2.py) アインシュタイン縮約記法を用いたテンソル計算
+- [code3.1.py](src/code3.1.py) 行列の基本的な演算
+- [code3.2.py](src/code3.2.py) アインシュタイン縮約記法を用いたテンソル計算
+- [code3.3.py](src/code3.3.py) 逆行列演算
+- [code3.4.py](src/code3.4.py) 行列とベクトルの掛け算
+- [code3.5.py](src/code3.5.py) ベクトルの内積計算
+- [code3.6.py](src/code3.6.py) 行列のトレース計算
