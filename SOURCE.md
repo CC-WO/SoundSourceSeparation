@@ -28,3 +28,5 @@
 - [code3.4.py](src/code3.4.py) 行列とベクトルの掛け算
 - [code3.5.py](src/code3.5.py) ベクトルの内積計算
 - [code3.6.py](src/code3.6.py) 行列のトレース計算
+- [code3.7.py](src/code3.7.py) 固有値計算
+- [code3.8.py](src/code3.8.py) クロネッカー積を用いた計算例
